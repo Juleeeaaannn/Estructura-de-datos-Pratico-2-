@@ -20,8 +20,6 @@ class ListaSecu:
         self.__lista=np.full(tamano,None)
         self.__tamano=tamano
         self.__cantidad=0
-    def Vacia(self):
-        return self.__cantidad==0
     def Insertar(self,elemento,pos=0):
         j=0
         if self.Vacia():
@@ -36,8 +34,6 @@ class ListaSecu:
             self.__cantidad+=1
         else:
             print("La lista esta llena!")
-    def Mostrar(self):
-        print(self.__lista)
     def Suprimir(self,pos):
         if pos>=0 and pos<self.__tamano-1:
             j=pos
@@ -69,6 +65,11 @@ class ListaSecu:
         if pos>=0 and pos<self.__tamano-1:
             retorna=self.__lista[pos-1]
         return retorna
+    def Recorrer(self,pos):
+        for i in self.__lista :
+            print(i)
+    def Vacia(self):
+        return self.__cantidad==0
 if __name__=='__main__':
     lista=ListaSecu(5)
     lista.Insertar(1)
