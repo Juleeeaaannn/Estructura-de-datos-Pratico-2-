@@ -1,7 +1,7 @@
 class Nodo:
     __elemento=None
     __siguiente=None
-    def __init__(self,elemento=''):
+    def __init__(self,elemento=None):
         self.__elemento=elemento
         self.__siguiente=None
     def setSiguiente(self, siguiente):
